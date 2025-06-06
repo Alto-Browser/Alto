@@ -18,15 +18,15 @@ This is the Alto Browser.
 
 ## Contributing
 
-I mostly wont be accepting contributions right now because I am still learning swiftUI (and how to code) so I dont want the project to start including code I dont understand. Feel free to make PR but be aware I may not accept it.
+I mostly wont be accepting contributions right now because I am still learning swiftUI (and how to code) so I dont want the project to start including code I dont understand. Feel free to make a PR but be aware I may not accept it.
 
 ## Roadmap
 
-ill add this later
+I'll add this later
 
 ## License
 
-This browser is currently licensed under a non-commercial license I will ask the Beam Team if they are ok with allowing comerical use but for now it will maintian Beam's license.
+This browser is currently licensed under a non-commercial license - I will ask the Beam Team if they are ok with allowing commercial use, but for now it will maintain Beam's license.
 
 ## Contact
 
@@ -35,6 +35,6 @@ studiomoviegirlthings@gmail.com
 
 ## Acknowledgements
 
-A huge thank you again to the team at Beam for making their code open source. If it was not for there code I would not have been able to make this and would not have learned as much as I have. Unlike other browser companies Beam actualy seem to have cared about there vision for the web so thank you.
+A huge thank you again to the team at Beam for making their code open source. If it was not for their code I would not have been able to make this and would not have learned as much as I have. Unlike other browser companies Beam actually seem to care about their vision for the web so thank you.
 
 - https://github.com/beamlegacy/beam
