@@ -21,12 +21,16 @@ struct AltoTopBar: View {
                 }, icon: "arrow.left", active: model.currentTab?.canGoBack ?? false)
                 .frame(height: 30)
                 .fixedSize()
+                .keyboardShortcut(Shortcuts.goBack)
+                .keyboardShortcut(Shortcuts.goBackAlt)
                 
                 AltoButton(action: {
                     model.currentTab?.webView.goForward()
                 }, icon: "arrow.right", active: model.currentTab?.canGoForward ?? false)
                 .frame(height: 30)
                 .fixedSize()
+                .keyboardShortcut(Shortcuts.goForward)
+                .keyboardShortcut(Shortcuts.goForwardAlt)
                 
                 FavoriteDropZoneView(model:FavoriteDropZoneViewModel(state: model.state, tabLocation: model.state.browserTabsManager.favorites))
                     .frame(height: 30)
@@ -44,6 +48,7 @@ struct AltoTopBar: View {
                 TopBarRigtButtonsView()
                     .frame(height: 30)
                     .fixedSize()
+                   
             }
             .frame(height: 30)
     }

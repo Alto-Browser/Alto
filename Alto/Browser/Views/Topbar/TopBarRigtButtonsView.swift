@@ -10,6 +10,7 @@ struct TopBarRigtButtonsView: View {
 
             // AltoButton(action: {altoState.toggleTopbar()}, icon: "rectangle")
         }
-        .padding(.leading, 40) // Ensures topbar doesnt feel cramped with buttons and tabs
+        .padding(.leading, 40)
+        .keyboardShortcut(Shortcuts.newTab)// Ensures topbar doesnt feel cramped with buttons and tabs
     }
 }

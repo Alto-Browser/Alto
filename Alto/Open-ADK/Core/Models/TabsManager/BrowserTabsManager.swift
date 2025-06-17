@@ -61,6 +61,12 @@ class BrowserTabsManager {
         self.currentSpace.currentTab = newTab
     }
 }
+    func closeCurrentTab() {
+        if let currentTab = self.currentSpace.currentTab {
+            currentTab.closeTab()
+        }
+    }
+}
 
 extension BrowserTabsManager {
     enum Location {
