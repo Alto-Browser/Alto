@@ -12,6 +12,7 @@ class AltoState {
     var Topbar: AltoTopBarViewModel.TopbarState = .active
     var browserTabsManager: BrowserTabsManager = BrowserTabsManager()
     var draggedTab: TabRepresentation?
+    var showCommandPalette = false
     
     init() {
         data = Alto.shared
@@ -29,6 +30,14 @@ class AltoState {
         case .active:
             Topbar = .hidden
         }
+    }
+    
+    func openCommandPalette() {
+        showCommandPalette = true
+    }
+    
+    func closeCommandPalette() {
+        showCommandPalette = false
     }
 
 }

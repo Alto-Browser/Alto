@@ -27,6 +27,9 @@ struct BrowserContentView: View {
                 }
             }
             .padding(5)
+            
+            // Command Palette Overlay
+            CommandPaletteView(altoState: altoState)
         }
         .ignoresSafeArea()
     }
