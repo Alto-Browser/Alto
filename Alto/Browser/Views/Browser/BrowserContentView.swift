@@ -33,13 +33,12 @@ struct BrowserContentView: View {
                                 AnyView(content.returnView())
                                     .cornerRadius(10)
                             }
-                        }
-
-                        if currentContent == nil {
+                        } else {
                             Image("Logo")
                                 .opacity(0.5)
                                 .blendMode(.softLight)
                                 .scaleEffect(1.3)
+                                .frame(maxHeight: .infinity)
                         }
                     }
                 }
