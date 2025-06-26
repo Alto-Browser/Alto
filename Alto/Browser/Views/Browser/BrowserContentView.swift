@@ -1,5 +1,22 @@
+import Observation
 import OpenADK
 import SwiftUI
+
+// MARK: - BrowserContentViewModel
+
+class BrowserContentViewModel {
+    // MARK: - Properties
+
+    var data: AltoData {
+        AltoData.shared
+    }
+
+    var state: AltoState
+
+    init(state: AltoState) {
+        self.state = state
+    }
+}
 
 // MARK: - BrowserContentView
 
