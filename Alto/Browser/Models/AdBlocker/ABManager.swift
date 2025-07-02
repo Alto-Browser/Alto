@@ -186,7 +186,7 @@ public class ABManager: ObservableObject {
             }
         }
 
-        // logger.info("🔄 Ad blocking toggled: \(isEnabled ? "ON" : "OFF")")
+        logger.info("🔄 Ad blocking toggled: \(self.isEnabled ? "ON" : "OFF")")
 
         // Trigger UI update
         objectWillChange.send()
@@ -289,10 +289,10 @@ public class ABManager: ObservableObject {
             logger.info("✅ Rule configuration unchanged (hash: \(currentHash.prefix(8))...), using cached rules")
             return true
         } else {
-            // logger
-            //     .info(
-            //         "🔄 Rule configuration changed (old: \(lastRuleCompilationHash?.prefix(8) ?? "none"), new: \(currentHash.prefix(8))), need to recompile"
-            //     )
+            logger
+                .info(
+                    "🔄 Rule configuration changed (old: \(self.lastRuleCompilationHash?.prefix(8) ?? "none"), new: \(currentHash.prefix(8))), need to recompile"
+                )
             return false
         }
     }
@@ -334,7 +334,7 @@ public class ABManager: ObservableObject {
 
         // Persist to UserDefaults for next app launch
         UserDefaults.standard.set(lastRuleCompilationHash, forKey: ruleHashKey)
-        // logger.info("💾 Cached rule hash: \(lastRuleCompilationHash?.prefix(8) ?? "none")...")
+        logger.info("💾 Cached rule hash: \(self.lastRuleCompilationHash?.prefix(8) ?? "none")...")
     }
 
     /// Load cached rule hash from UserDefaults
@@ -450,10 +450,10 @@ public class ABManager: ObservableObject {
             blockedRequestsThisSession = settings.blockedRequestsThisSession
             whitelistedDomains = settings.whitelistedDomains
 
-            // logger
-            //     .info(
-            //         "📋 Loaded settings from file: enabled=\(isEnabled), blocked=\(totalBlockedRequests), whitelist=\(whitelistedDomains.count)"
-            //     )
+            logger
+                .info(
+                    "📋 Loaded settings from file: enabled=\(self.isEnabled), blocked=\(self.totalBlockedRequests), whitelist=\(self.whitelistedDomains.count)"
+                )
         } catch {
             logger.error("❌ Failed to load settings from file: \(error)")
             logger.info("📋 Using default settings")
