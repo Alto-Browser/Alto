@@ -122,7 +122,7 @@ public final class ABContentBlocker: NSObject, ObservableObject {
 
     /// Create multiple rule lists from a large set of rules
     private func createMultipleRuleLists(from allRules: [ABContentRule]) async throws -> [WKContentRuleList] {
-        // logger.info("🔧 Splitting \(allRules.count) rules into multiple rule lists (max \(maxRulesPerList) rules each)")
+        logger.info("🔧 Splitting \(allRules.count) rules into multiple rule lists (max \(self.maxRulesPerList) rules each)")
 
         // Separate blocking rules from whitelist rules
         var blockingRules: [ABContentRule] = []
