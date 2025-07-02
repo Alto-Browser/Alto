@@ -9,5 +9,8 @@ struct AltoApp: App {
         Settings {
             SettingsView()
         }
+        .commands {
+            AppCommands()
+        }
     }
 }

@@ -9,6 +9,9 @@ open class AltoWindowManager {
     public var defaultConfig: DefaultWindowConfiguration = .init()
 
     public var windows: [ADKWindow] = []
+    public var activeWindow: AltoWindow? {
+        (NSApplication.shared.keyWindow as? AltoWindow) ?? (NSApplication.shared.mainWindow as? AltoWindow)
+    }
 
     private var defaultProfile: Profile {
         ProfileManager.shared.defaultProfile
